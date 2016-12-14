@@ -9,6 +9,9 @@ html, body {
 }
 
 .navbar-header {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
     font-family: $secondary-font;
     background-color: white;
 }
