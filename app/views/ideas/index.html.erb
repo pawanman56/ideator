@@ -6,6 +6,11 @@
             <small><%= idea.author %></small>
         </blockquote>
       </div>
+      
+      <div class="btn-group" role="group">
+        <%= link_to 'Delete', idea_path(idea), method: :delete, class: 'btn btn-sm btn-danger', data: {confirm: "Are you sure?"} %>
+        <%= link_to 'Revise', edit_idea_path(idea), class: 'btn btn-sm btn-succses' %>
+      </div>
     </div>
 <% end %>
 
@@ -18,22 +23,23 @@
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
+      
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="myModalLabel">Add Idea</h4>
-      </div>
+      </div><!-- /.modal-header -->
+      
       <div class="modal-body">
         <%= simple_form_for Idea.new do |f| %>
           <%= f.input :description %>
           <%= f.input :author %>
-          
-        
-      </div>
+      </div><!-- /.modal-body -->
+      
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         <%= f.submit 'Submit', class: 'btn btn-primary' %>
-      </div>
+      </div><!-- /.modal-footer -->
       <% end %>
-    </div>
-  </div>
-</div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dilog -->
+</div><!-- /.model -->
