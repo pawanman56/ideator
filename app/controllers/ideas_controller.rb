@@ -19,14 +19,14 @@ class IdeasController < ApplicationController
     
     def update
         @idea = Idea.find(params[:id])
-        if Idea.update(idea_params)
+        if @idea.update(idea_params)
             redirect_to root_path
         else
             redirect_to edit_idea_path(params[:id])
         end
     end
     
-    def delete
+    def destroy
         @idea = Idea.find(params[:id])
         @idea.destroy
         redirect_to root_path
