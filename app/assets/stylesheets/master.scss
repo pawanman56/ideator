@@ -1,5 +1,7 @@
 $primary-font: 'Open Sans', sans-serrif;
 $secondary-font: 'Dosis', sans-serrif;
+$author-font-1:'Calligraffitti', cursive;
+$author-font-2: 'Bilbo Swash Caps', cursive;
 $main-blue: #337ab7;
 $footer-height: 45px;
 
@@ -34,6 +36,10 @@ html, body {
     a:hover {
         color: $main-blue;
     }
+}
+
+.author {
+    font-family: $author-font-1;
 }
 
 .footer {
