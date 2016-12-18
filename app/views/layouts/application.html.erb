@@ -16,10 +16,14 @@
     <%= render 'shared/nav' %>
     
     <div class="container">
+      
+      <%= render 'shared/flash_messages' %>
+      
       <%= yield %>
-    </div>
+      
+    </div><!-- /.container -->
     
-  </div><!-- wrap -->
+  </div><!-- /.wrap -->
   
   <%= render 'shared/foot' %> 
 
